@@ -6,7 +6,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.opt.signcolumn = "no"
-vim.opt.cursorline = trye
+vim.opt.cursorline = true
 
 vim.opt.wrap = false
 
@@ -49,7 +49,8 @@ vim.opt.rtp:prepend(lazypath)
 -------------------
 
 require("lazy").setup({
-    "rebelot/kanagawa.nvim"
+    "rebelot/kanagawa.nvim",
+    "navarasu/onedark.nvim"
 })
 
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("onedark")

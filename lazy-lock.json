@@ -1,4 +1,5 @@
 {
   "kanagawa.nvim": { "branch": "master", "commit": "fe5b2c9e2549862c3dc3f3c8e9cf7ddece0f40c2" },
-  "lazy.nvim": { "branch": "main", "commit": "4ea9fe060042f345960ad0c01aa7bca91405e10a" }
+  "lazy.nvim": { "branch": "main", "commit": "4ea9fe060042f345960ad0c01aa7bca91405e10a" },
+  "onedark.nvim": { "branch": "master", "commit": "8e4b79b0e6495ddf29552178eceba1e147e6cecf" }
 }
