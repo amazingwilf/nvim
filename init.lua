@@ -1,3 +1,7 @@
+-------------
+-- options --
+--------------
+
 vim.opt.number = true		
 vim.opt.numberwidth = 2
 vim.opt.relativenumber = true
@@ -27,9 +31,9 @@ vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
-
-
-
+--------------
+-- Keybinds --
+--------------
 
 vim.g.mapleader = " "
 
@@ -67,7 +71,9 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
     "terrortylor/nvim-comment",
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    'akinsho/bufferline.nvim',
+    dependencies = { "nvim-tree/nvim-web-devicons" },
 })
 
 vim.cmd.colorscheme("kanagawa-dragon")
@@ -79,3 +85,5 @@ require 'nvim-autopairs'.setup()
 require('nvim_comment').setup()
 
 require('lualine').setup()
+
+require('bufferline').setup()
