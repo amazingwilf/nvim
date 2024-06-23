@@ -26,5 +26,8 @@ require("lazy").setup({
             vim.cmd.colorscheme("kanagawa-dragon")
         end,
     },
+    {
+        "nvim-treesitter/nvim-treesitter",
+    },
 })
 
