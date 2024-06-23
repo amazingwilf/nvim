@@ -1,0 +1,55 @@
+vim.opt.number = true		
+vim.opt.numberwidth = 2
+vim.opt.relativenumber = true
+
+vim.opt.splitbelow = true	
+vim.opt.splitright = true
+
+vim.opt.signcolumn = "no"
+vim.opt.cursorline = trye
+
+vim.opt.wrap = false
+
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
+vim.opt.clipboard = "unnamedplus"
+
+vim.opt.scrolloff = 999
+
+vim.opt.virtualedit = "block"
+
+vim.opt.inccommand = "split"
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.termguicolors = true
+
+------------------------------
+-- lazy.nvim plugin manager --
+------------------------------
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-------------------
+-- setup plugins --
+-------------------
+
+require("lazy").setup({
+    "rebelot/kanagawa.nvim"
+})
+
+vim.cmd.colorscheme("kanagawa-dragon")
