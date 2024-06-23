@@ -50,7 +50,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "rebelot/kanagawa.nvim",
-    "navarasu/onedark.nvim"
+    "navarasu/onedark.nvim",
+    "norcalli/nvim-colorizer.lua",
+    "windwp/nvim-autopairs",
+    "terrortylor/nvim-comment"
 })
 
-vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("kanagawa-dragon")
+
+require 'colorizer'.setup()
+
+require 'nvim-autopairs'.setup()
+
+require('nvim_comment').setup()
