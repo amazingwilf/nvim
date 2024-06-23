@@ -27,6 +27,18 @@ vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
+
+
+
+
+vim.g.mapleader = " "
+
+local keymap = vim.keymap
+
+keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Toggle commenting" })
+
+
 ------------------------------
 -- lazy.nvim plugin manager --
 ------------------------------
@@ -53,7 +65,9 @@ require("lazy").setup({
     "navarasu/onedark.nvim",
     "norcalli/nvim-colorizer.lua",
     "windwp/nvim-autopairs",
-    "terrortylor/nvim-comment"
+    "terrortylor/nvim-comment",
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
 })
 
 vim.cmd.colorscheme("kanagawa-dragon")
@@ -63,3 +77,5 @@ require 'colorizer'.setup()
 require 'nvim-autopairs'.setup()
 
 require('nvim_comment').setup()
+
+require('lualine').setup()
